@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <a [routerLink]="['']">Home</a>
+    <a [routerLink]="['about']">About</a>
+  </nav>
+</header>
+<main>
+  <h1>First {{api.title}}!</h1>
+
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <a [href]="url">CourseAngular 2</a>
+</footer>
