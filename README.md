@@ -2,9 +2,24 @@
 Examples for the course.
 Project based on webpack-Seed -->https://github.com/preboot/angular2-webpack
 
-### Quick start
+### Prerequisites
 
-> Clone/Download the repo then edit `app.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
+You need git to clone the repository.
+You can get git
+
+You must have node.js and its package manager (npm) installed.  
+You can get them from [http://nodejs.org/](http://nodejs.org/).
+
+### Setting work environment for this course
+We will need to install:
+
+* install node.js
+* install git
+* install [Source tree](https://www.sourcetreeapp.com/) or GITHUB desktop.
+* Download the source code from [GITHUB](https://github.com/jcyovera/angular2Example.git)
+
+
+### Quick start
 
 ```bash
 # clone our repo
