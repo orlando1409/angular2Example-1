@@ -26,7 +26,7 @@ We will need to install:
 $ git clone https://github.com/jcyovera/angular2Example
 
 # change directory to your app
-$ cd my-app
+$ cd ng2-app
 
 # install the dependencies with npm
 $ npm install
