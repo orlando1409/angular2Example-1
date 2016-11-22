@@ -7,8 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ExampleComponent } from './example/example.component';
+import { NgbdModalContent } from './modal/my-modal-content.component';
+import { ProductComponent } from './product/product.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
+import { ExampleService } from './example/example.service';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 /**
@@ -26,15 +30,20 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ExampleComponent,
+    ProductComponent,
+    NgbdModalContent
   ],
+  entryComponents: [NgbdModalContent],
   providers: [
-    ApiService
+    ApiService,
+    ExampleService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(public appRef: ApplicationRef) {}
+  constructor(public appRef: ApplicationRef) { }
   hmrOnInit(store) {
     console.log('HMR store', store);
   }

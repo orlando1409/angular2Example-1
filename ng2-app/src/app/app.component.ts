@@ -13,7 +13,7 @@ import '../style/app.scss';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  url = 'https://github.com/jcyovera/angular2Example';
+  url = 'https://github.com/jcyovera/angular2Example5';
 
   constructor(private api: ApiService) {
     // Do something with api
