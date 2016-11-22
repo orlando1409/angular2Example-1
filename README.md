@@ -90,3 +90,9 @@ To build your application, run:
 * `npm run build`
 
 You can now go to `/dist` and deploy that to your server!
+
+## Documentation
+
+You can generate api docs (using [TypeDoc](http://typedoc.org/)) for your code with the following:
+
+* `npm run docs`
