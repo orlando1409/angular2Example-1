@@ -9,7 +9,9 @@ import {
 import { ExampleService } from './example.service';
 import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalContent } from '../modal/my-modal-content.component';
+import { Observable, Subject } from 'rxjs/Rx';
 import IProduct = Example.Models.IProduct;
+
 @Component({
     selector: 'my-example-list',
     templateUrl: './example.component.html',
@@ -17,22 +19,30 @@ import IProduct = Example.Models.IProduct;
 
 })
 export class ExampleComponent implements OnInit {
-    products: IProduct[];
+    products: Example.Models.IProduct[];
     selectedProduct: any;
     closeResult: string;
     constructor(private exampleService: ExampleService,
         private modalService: NgbModal) {
         // Do stuff
+        console.log("hiii");
     }
 
     ngOnInit() {
-        this.products = this.exampleService.getListProducts();
-        console.log('Hello Example');
+       let self = this;
+       //this.products= this.exampleService.getListProducts();
+       this.exampleService.getListProducts()
+       .subscribe(result=>{
+           self.products=result;
+       }, error=>{
+           console.log(error);
+       });
     }
     goDetails(selectedProduct: any) {
+        console.debug("details", selectedProduct);
         this.selectedProduct = selectedProduct;
         this.open();
-        console.debug("details", selectedProduct);
+        
     }
     open() {
         const modalRef = this.modalService.open(NgbdModalContent);

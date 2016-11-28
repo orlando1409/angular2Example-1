@@ -10,9 +10,14 @@ import { AboutComponent } from './about/about.component';
 import { ExampleComponent } from './example/example.component';
 import { NgbdModalContent } from './modal/my-modal-content.component';
 import { ProductComponent } from './product/product.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
 import { ExampleService } from './example/example.service';
+import { EllipsisPipe } from './shared/ellipsis.pipe';
+import { HighlightDirective} from './_Directives/highlight';
+import { MyCurrencyFormatterDirective} from './_Directives/currency-formatter';
+import { MyCurrencyPipe} from './shared/my-currency.pipe';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 /**
@@ -33,12 +38,18 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AboutComponent,
     ExampleComponent,
     ProductComponent,
-    NgbdModalContent
+    NgbdModalContent,
+    ProductItemComponent,
+    EllipsisPipe,
+    MyCurrencyPipe,
+    HighlightDirective,
+    MyCurrencyFormatterDirective
   ],
   entryComponents: [NgbdModalContent],
   providers: [
     ApiService,
-    ExampleService
+    ExampleService,
+    MyCurrencyPipe,
   ],
   bootstrap: [AppComponent]
 })
