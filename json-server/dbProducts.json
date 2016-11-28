@@ -40,6 +40,12 @@
   "profile": {
     "name": "typicode"
   },
+  "users":[
+	  {
+		  "username":"jcyovera@gmail.com",
+		  "password":"admin123"
+	  }
+  ],
   "translateData": {
     "1": "one",
     "2": "two",
