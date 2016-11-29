@@ -11,6 +11,11 @@ import { ExampleComponent } from './example/example.component';
 import { NgbdModalContent } from './modal/my-modal-content.component';
 import { ProductComponent } from './product/product.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+
+import { RouteExampleComponent  } from './route-example/route-example.component';
+import { RouteItemComponent } from './route-item-example/route-item-example.component';
+import{ LoginComponent} from './login/login.component';
+
 import { ApiService } from './shared';
 import { routing } from './app.routing';
 import { ExampleService } from './example/example.service';
@@ -18,6 +23,9 @@ import { EllipsisPipe } from './shared/ellipsis.pipe';
 import { HighlightDirective} from './_Directives/highlight';
 import { MyCurrencyFormatterDirective} from './_Directives/currency-formatter';
 import { MyCurrencyPipe} from './shared/my-currency.pipe';
+import { CanActivateAuthGuard } from './shared/can-active.service';
+import { UserProfileService} from './login/user-profile.service';
+import { RouteComponent} from './route-example/route.component';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 /**
@@ -40,13 +48,19 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     ProductComponent,
     NgbdModalContent,
     ProductItemComponent,
+    RouteExampleComponent,
+    RouteItemComponent,
     EllipsisPipe,
     MyCurrencyPipe,
     HighlightDirective,
-    MyCurrencyFormatterDirective
+    MyCurrencyFormatterDirective,
+    RouteComponent,
+    LoginComponent
   ],
   entryComponents: [NgbdModalContent],
   providers: [
+    CanActivateAuthGuard,
+    UserProfileService,
     ApiService,
     ExampleService,
     MyCurrencyPipe,

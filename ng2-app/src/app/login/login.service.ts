@@ -9,9 +9,6 @@ export class LoginService {
   constructor(private userProfileService: UserProfileService, private http: Http) { }
   loginObserver: Observable<any>;
   login(username:string,password:string) {
-    /*return Observable.of(true)
-        .delay(1000)
-        .do(this.toggleLogState.bind(this));*/
   let self=this;
   return this.getUser(username,password)
       .map((users) => {

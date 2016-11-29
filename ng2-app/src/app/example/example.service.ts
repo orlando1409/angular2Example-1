@@ -16,4 +16,8 @@ export class ExampleService {
     return this.http.get('http://localhost:3000/translateData')
             .map((res: Response) => res.json());
   }
+  getProduct(id: number) {
+    return this.getListProducts()
+      .map(products => products.find(product => product.id === id));
+  }
 }
